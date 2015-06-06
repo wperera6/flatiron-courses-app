@@ -1,0 +1,15 @@
+
+<h1> All Course Listings </h1>
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:query, "Search for Courses:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
+<% @course.each do |c| %>
+  <li>
+    <h3><%= c.name %> </h3>
+    </li>
+ <% end %>

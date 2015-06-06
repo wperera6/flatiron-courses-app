@@ -1,0 +1,17 @@
+<h1> Your Courses </h1>
+
+
+<h1> Course Listings </h1>
+<% if @current_user == current_user %>
+<% @courses.each do |c| %>
+  <li>
+    <h3><%= c.name %></h3>
+     <%= link_to 'Delete', @course, data: {confirm: 'Are you sure?'}, :action => 'destroy', :method => :delete, :class => 'md md-clear'  %>
+    </li> 
+    <% end %>
+     <% end %>
+
+
+
+    
+  

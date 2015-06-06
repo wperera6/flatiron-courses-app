@@ -1,0 +1,11 @@
+
+<% if @results.length > 0 %>
+<% @results.each do |results| %>
+  <h3><%= results.name %> </h3>
+  <% end %>
+  <% else %>
+   <h3> Course was not found </h3>
+
+<% end %>
+
+
